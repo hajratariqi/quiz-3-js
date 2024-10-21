@@ -12,3 +12,26 @@ while (count < 5) {
     console.log(count);
     count++;
 }
+
+const fillCity = () =>{
+    var cityName;
+    var zipEntered = document.getElementById("zip").value; // Get the ZIP code entered by the user
+
+    switch (zipEntered) {
+        case "60608":
+            cityName = "Chicago";
+            break;
+
+            case "000":
+                cityName = "Karachi";
+                break;
+
+                case "1111":
+                    cityName = "Islamabad";
+                    break;
+            
+    }
+
+    document.getElementById("city").value = cityName; // Set the city field's value
+
+}
