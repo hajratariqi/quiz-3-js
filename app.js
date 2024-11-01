@@ -35,3 +35,22 @@ const fillCity = () =>{
     document.getElementById("city").value = cityName; // Set the city field's value
 
 }
+
+
+function x(){
+    document.write(2 + 5 + "8");
+  }
+  x()  
+
+
+// non primitive type
+var arr =  null
+console.log(typeof arr);
+
+var str = "Hello";       // tag is 1
+var bool = true;         // tag is 2
+var num = 42;            // tag is 3
+
+var obj = {};            // tag is 0
+var arr = [];            // tag is 0
+var n = null;            // tag is 0
