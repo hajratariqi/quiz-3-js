@@ -56,22 +56,18 @@ var arr = [];            // tag is 0
 var n = null;            // tag is 0
 
 
-let bracket = "{[()]}"
-
-const isBracket = (bracket) => {
-    
+const isBracket = (bracket) => { 
     var stack = []
-    
+
     for(var x of bracket){
         if(x == '{' || x == '(' || x == '['){
             stack.push(x)
-    }
-     else if(stack.length == 0){
+        } else if(stack.length == 0){
         return 'NOT BALANCED'
-    }
+        }
 }
 return stack
 }
-var result = isBracket(bracket)
+var result = isBracket('{[()]}')
 console.log(result);
 
