@@ -57,7 +57,7 @@
 
 
 const isBracket = (bracket) => { 
-    let stack = ['{', '[', '('];
+    let stack = [];
     let check;
     
     for(var x of bracket){
