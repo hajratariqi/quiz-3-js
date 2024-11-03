@@ -57,38 +57,37 @@
 
 
 const isBracket = (bracket) => { 
-    let stack = [];
+    let stack = ['{', '[', '('];
     let check;
     
     for(var x of bracket){
         if(x == '{' || x == '(' || x == '['){
             stack.push(x)
-        } else if(stack.length == 0){
-            return 'NOT BALANCED'
-        }
+        } 
+
         switch(x){
             case ']':
               check = stack.pop();
-                if(check == '{' || check == '(') {
+                if(check != '[') {
                     return 'NOT BALANCED'
                 }
                 break;
             case ')':
               check = stack.pop();
-                if(check == '{' || check == '[') {
+                if(check != '(') {
                     return 'NOT BALANCED'
                 }
                 break;
 
             case '}':
                     check = stack.pop();
-                    if(check == '(' || check == '[') {
+                    if(check != '{') {
                     return 'NOT BALANCED'
                 }
                 break;
         }
 }
-return 'BALANCED'
+return stack.length === 0 ? 'BALANCED' : 'NOT BALANCED';
 }
 console.log(isBracket('{[()]}'));
 
