@@ -91,3 +91,12 @@ return stack.length === 0 ? 'BALANCED' : 'NOT BALANCED';
 }
 console.log(isBracket('{[()]}'));
 
+
+
+const slowestKey = (keyTimes) =>{
+    for(let i = 0; i < keyTimes.length; i++)
+    console.log(i);
+
+}
+let keyTimes = [[0, 2],[1, 5],[0, 9],[2, 15]]
+slowestKey(keyTimes)
