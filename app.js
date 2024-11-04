@@ -97,7 +97,8 @@ const slowestKey = (arr) =>{
     let previousTime = 0;
     let max = 0;
     let key = null;
-
+    let letter
+    
     for(let i = 0; i < arr.length; i++){
         let currentTime = arr[i][1] - previousTime;
         previousTime = arr[i][1]
@@ -105,11 +106,11 @@ const slowestKey = (arr) =>{
         if(currentTime > max){
             max = currentTime
             key = arr[i][0]
+            letter = String.fromCharCode(97 + key)
         }
     };
-    
-    console.log(max, key);
+    console.log(letter, max);
 }
 
-let keyTimes = [[0, 2],[1, 5],[0, 9],[2, 1]]
+let keyTimes = [[2, 1],[0, 2]]
 slowestKey(keyTimes)
