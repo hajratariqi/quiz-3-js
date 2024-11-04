@@ -93,10 +93,23 @@ console.log(isBracket('{[()]}'));
 
 
 
-const slowestKey = (keyTimes) =>{
-    for(let i = 0; i < keyTimes.length; i++)
-    console.log(i);
+const slowestKey = (arr) =>{
+    let previousTime = 0;
+    let max = 0;
+    let key = null;
 
+    for(let i = 0; i < arr.length; i++){
+        let currentTime = arr[i][1] - previousTime;
+        previousTime = arr[i][1]
+        
+        if(currentTime > max){
+            max = currentTime
+            key = arr[i][0]
+        }
+    };
+    
+    console.log(max, key);
 }
-let keyTimes = [[0, 2],[1, 5],[0, 9],[2, 15]]
+
+let keyTimes = [[0, 2],[1, 5],[0, 9],[2, 1]]
 slowestKey(keyTimes)
